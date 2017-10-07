@@ -1,0 +1,331 @@
+// global variables
+@full-back-color: white;
+@full-dim-per: 100%;
+@header-ht : 185px;
+@header-color: rgba(45, 50, 54, 1);
+@font-gray:  rgba(127, 127, 127, 1);
+@font-lgray: rgba(227, 226, 224, 1);
+@con-max-width: 700px;
+@global-font: agency_fb;
+@fn-sz-sm : 12px;
+@fn-sz-md : 14px;
+@fn-sz-lr : 20px;
+@fn-sz-vvl: 60px;
+@fn-sz-vl: 30px;
+@font-blue: rgba(76,161,213,1);
+
+// agency fb web font
+@font-face {
+    font-family: agency_fb;
+    src: url('../fonts/Agency_FB.ttf');
+}
+
+// useful methods
+.boxsizing{
+    box-sizing: border-box;
+}
+.center-set {
+    margin: 0 auto;
+    padding: 0;
+    .boxsizing;
+}
+.zero-box{
+    margin: 0;
+    padding: 0;
+    .boxsizing;
+}
+.blue-font{
+    color: @font-blue;
+}
+.spacing{
+    letter-spacing: 1.2px;
+}
+.list-style-none{
+    list-style-type: none;
+}
+.list-style-square{
+    list-style-type: square;
+}
+.pull-left{
+    display: block;
+    float: left;
+}
+.pull-right{
+    display: block;
+    float: right;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+// useful functions
+.setSectionProp(@wdh, @bckgr){
+    .pull-left;
+    width: @wdh;
+    background: @bckgr;
+}
+
+body{
+    .zero-box;
+    font-family: agency_fb;
+    background: gray;
+}
+.container{
+    width: @con-max-width;
+    height: 889px;
+    background: @full-back-color;
+    max-width: @con-max-width;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+    .header{
+        width: @full-dim-per;
+        height: @header-ht;
+        background: @header-color;
+        color: white;
+        font-size: @fn-sz-vvl;
+        .boxsizing;
+        padding-top: 27px;
+        .pull-left;
+        .name{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            .uppercase;
+            font-size: @fn-sz-vvl;
+            .spacing;
+            .center-set;
+            span{
+                .blue-font;
+            }
+        }
+        .role {
+            width: @full-dim-per;
+            height: 40px;
+            text-align: center;
+            .boxsizing;
+            .uppercase;
+            font-size: @fn-sz-vl;
+            .spacing;
+            .center-set;
+            padding-top: 20px;
+            span{
+                .blue-font;
+            }
+        }
+        .blue_line{
+            border: 0;
+            border-top: 3.5px solid @font-blue;
+            width: 90%;
+            .center-set;
+            margin-top: 25px;
+        }
+        .contact {
+            width: 100%;
+            height: auto;
+            .boxsizing;
+            div {
+                width: 50%;
+                .boxsizing;
+                height: 39px;
+               .pull-left;
+               .left{
+                   .boxsizing;
+                   .pull-left;
+                   width: 30%;
+                   height: 100%;
+               }
+                .right{
+                    .boxsizing;
+                    .pull-right;
+                    width: 70%;
+                    height: 100%;
+                }
+                .email_img {
+                    background: url('../images/mail.png');
+                } 
+                .phone_img {
+                    background: url('../images/phone.png');
+                }
+                .imgClass{
+                    width: 20px;
+                    height: 20px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    .pull-right;
+                    margin-top: 9px;
+                }
+                .textCls {
+                    color: @font-lgray;
+                    font-size: @fn-sz-lr;
+                    letter-spacing: 1.2;
+                    margin-top: 7px;
+                    padding-left: 10px;
+                    a {
+                        text-decoration: none;
+                        color: @font-lgray;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+
+        }
+    }
+    .content{
+        width: @full-dim-per;
+        height: auto;
+        .zero-box;
+        .pull-left;
+        font-size: @fn-sz-lr;
+        background: @font-lgray;
+        .leftSection{
+            .setSectionProp(34%, rgba(227, 226, 224, 1));
+            .skills_section, .web_pres_section, .language_section{
+                p{
+                    font-size: @fn-sz-lr;
+                    .uppercase;
+                    .spacing;
+                    text-align: center;
+                    margin-bottom: 0;
+                    margin: 0 auto;
+                    margin-top: 16px;
+                    padding: 5px;
+                    background: @header-color;
+                    width: 70%;
+                    padding-top: 6px;
+                    color: @font-lgray;
+                }
+            }
+            .web_pres_section{
+                margin-top: 30px;
+            }
+            .language_section{
+                margin-top: 35px;
+            }
+        }
+        .rightSection{
+            .setSectionProp(66%, 'white');
+            background: @full-back-color;
+
+
+            // general styles for heading 
+            .in_headng { // -- heading start
+                .boxsizing;
+                .zero-box;
+                padding: 0 7px;
+                width: @full-dim-per;
+                height: 50px;
+                padding-top: 16px;
+                position: relative;
+                .in_txt{
+                    margin: 0 auto;
+                    text-align: center;
+                    width: 84%;
+                    top: 17px;
+                    font-size: 20px;
+                    .spacing;
+                    .uppercase;
+                    background: @font-lgray;
+                    color: black;
+                    padding: 5px;
+                }
+            } // -- end
+            .in_contnt{ // content start
+                width: @full-dim-per;
+                .boxsizing;
+                .zero-box;
+                margin-top: 20px;
+                padding-left: 25px;
+                padding-right: 25px;
+                .postsn {
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    .spacing;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    width: 100%;
+                    float: left;
+                }
+                .companysn {
+                    font-weight: bold;
+                    width: 100%;
+                    float: left;
+                    font-size: 17px;
+                    padding-bottom: 5px;
+                    .spacing;
+                }
+                .projectSn {
+                    width: 100%;
+                    float: left;
+                    box-sizing: border-box;
+                    .name {
+                        .spacing;
+                        font-size: 16px;
+                        width: 50%;
+                        box-sizing: border-box;
+                        float: left;
+                    }
+                    .duration {
+                        font-size: 16px;
+                        width: 50%;
+                        box-sizing: border-box;
+                        float: left;
+                        text-align: right;
+                    }
+                }
+                .description {
+                    padding-bottom: 5px;
+                    float: left;
+                    width: 100%;
+                    font-size: 16px;
+                    ul {
+                        margin: 5px;
+                        padding-left: 10px;
+                    }
+                }
+            } // end
+            .work_exp{
+                .setSectionProp(100%, 'white');
+            }
+            .education {
+                .setSectionProp(100%, 'white');
+                padding-bottom: 20px;
+                .group {
+                    text-transform: none;
+                    font-size: 17px;
+                }
+                .college {
+                    font-size: 14px;
+                }
+                .marks {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .footer{
+        height: 50px;
+        width: @full-dim-per;
+        background: @header-color;
+        .pull-left;
+        a{
+            color: white;
+            text-decoration: none;
+            float: right;
+            margin: 16px;
+            letter-spacing: 1.2px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
