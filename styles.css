@@ -268,7 +268,7 @@ input[type='button']:focus {
 
 .cart-product-list .cart-product {
   width: 90%;
-  height: 100px;
+  height: 110px;
   margin: 0 auto;
   background: white;
   margin-bottom: 10px;
@@ -294,7 +294,7 @@ input[type='button']:focus {
 
 .cart-product-list .cart-product .product-dtls .overall-price {
   float: left;
-  width: 150px;
+  width: 180px;
   margin: 5px;
   margin-right: 0;
   font-weight: bold;
@@ -303,15 +303,15 @@ input[type='button']:focus {
 
 .cart-product-list .cart-product .product-dtls .quantity {
   float: left;
-  width: 170px;
+  width: 130px;
   margin: 5px;
   margin-left: 0;
 }
 
 .cart-product-list .cart-product .product-dtls .remove-product {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: -6px;
+  right: 0px;
   font-size: 12px;
   text-decoration: underline;
   color: blue;
@@ -319,7 +319,7 @@ input[type='button']:focus {
 }
 
 .cart-product-list .cart-product .product-dtls .quantity input {
-  width: 50px;
+  width: 40px;
   border: 2px solid black;
   margin-left: 5px;
   text-align: center;

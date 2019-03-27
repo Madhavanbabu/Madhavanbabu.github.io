@@ -105,7 +105,7 @@ function createProduct(id, name, category, description, price, images) {
         </div>
       </div>
       <div class="price">
-        $${price}
+        GBP ${price}
       </div>
   </div>`;
 
@@ -320,7 +320,7 @@ function createCartModal(obj, index){
     </div>
     <div class="product-dtls">
       <div class="name">${obj.name}</div>
-      <div class="overall-price" id="quantprice-${obj.id}">Price : $${obj.quantprice}</div>
+      <div class="overall-price" id="quantprice-${obj.id}">Price : GBP ${obj.quantprice}</div>
       <div class="quantity">Quantity:<input id="quantity-cart-${obj.id}-${index}" min="0" max="10" count="1" type="number" value="1" onchange="quantityChanged(${obj.id}, ${index}, value)"></div>
       <div class="remove-product" onclick="removeProduct(${index})">Remove</div>
     </div>
@@ -350,13 +350,13 @@ function calculateTotal() {
   }
 
   grandTotal = Math.round(grandTotal *100)/100;
-  document.getElementById('grandTotal').innerHTML = `$${grandTotal}`;
+  document.getElementById('grandTotal').innerHTML = `GBP ${grandTotal}`;
 }
 
 // Method called to update the Price when any new item is added or removed from cart
 function updatePrice(id, price) {
   let elem = document.getElementById(`quantprice-${id}`);
-  elem.innerHTML = `<span>Price : $${price}</span>`;
+  elem.innerHTML = `<span>Price : GBP ${price}</span>`;
 }
 
 // method to remove individual element from the cart
@@ -369,7 +369,7 @@ function removeProduct(index) {
   cacheCartItems();
   // if the cart_items object is empty, reset the grand total to 0
   if(cart_items.length == 0){
-    document.getElementById('grandTotal').innerHTML = `$0.00`;
+    document.getElementById('grandTotal').innerHTML = `GBP 0.00`;
   }
 }
 
@@ -382,7 +382,7 @@ function clearCart() {
   updateCartText();
   cacheCartItems();
   // if the cart_items object is empty, reset the grand total to 0
-  document.getElementById('grandTotal').innerHTML = `$0.00`;
+  document.getElementById('grandTotal').innerHTML = `GBP 0.00`;
 }
 
 // Method to update the count next to the Cart icon
