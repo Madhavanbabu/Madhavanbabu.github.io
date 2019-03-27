@@ -42,6 +42,7 @@ input[type='button']:focus {
   background-color: #24305E;
   padding: 20px 10px;
   position:fixed;
+  z-index: 1;
 }
 
 .header-class .header-txt {
@@ -141,11 +142,20 @@ input[type='button']:focus {
   margin: 10px;
   width: 150px;
   height: 150px;
-  background: grey;
   float: left;
-  background-image: url('./mouse_img.jpg');
-  background-repeat: no-repeat;
-  background-size: 150px 150px;
+  position:relative;
+}
+
+.container .content .product-section .icon  .left-btn {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+}
+
+.container .content .product-section .icon  .right-btn {
+  position: absolute;
+  right: -10px;
+  top: 50%;
 }
 
 .container .content .product-section .product-details{
@@ -268,10 +278,6 @@ input[type='button']:focus {
     width: 100px;
     height: 100px;
     float: left;
-    background: grey;
-    background-image: url('./mouse_img.jpg');
-    background-repeat: no-repeat;
-    background-size: 100px 100px;
 }
 
 .cart-product-list .cart-product .product-dtls {
