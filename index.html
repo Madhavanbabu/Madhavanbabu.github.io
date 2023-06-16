@@ -1,108 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Basket</title>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="data.js" charset="utf-8"></script>
+  <title>Test Page</title>
   <script src="script.js" charset="utf-8"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- code for header section -->
-    <div class="header-class">
-      <div class="header-txt">
-        Shopping Cart App
-      </div>
-      <div class="cart-section">
-        <div class="cart-quantity" id="cartCount">1</div>
-        <div class="cart-icon" onclick="openNav()">
-          <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" style="color:white"></i>
-        </div>
-      </div>
-    </div>
-    <!--code for content section -->
-    <div class="container">
-      <div class="filters">
-
-        <!-- Category filters -->
-        <div class="category">
-          <div class="category-txt">Filters</div>
-          <ul class="category-list" id="categoryList">
-
-          </ul>
-        </div>
-
-        <!-- Sorting by price -->
-        <div class="category">
-          <div class="category-txt">Sort by Price</div>
-          <ul class="category-list sort-list" id="sortList">
-
-          </ul>
-        </div>
-      </div>
-      <!-- Products List -->
-      <div class="content" id="productsList">
-
-        <!-- Products -->
-
-      </div>
-    </div>
-
-    <!-- Cart section -->
-    <div id="cart_panel" class="cart-panel">
-      <div class="outer-wrapper" id="outerWrapper">
-        <!-- Header -->
-        <div class="cart-header">
-          <div class="cart-txt" >Your Cart - <span id="cartText">0</span> items added </div>
-          <div class="clear-cart" onclick="clearCart()">Clear Cart</div>
-        </div>
-        <!-- Close button -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="cart-product-list" id="cartProductList">
-
-        </div>
-        <!-- Total section -->
-        <div class="total-section">
-          <div class="txt">Grand Total:</div>
-          <div class="total-price" id="grandTotal">GBP 0.00</div>
-        </div>
-        <!-- Delivery Details section -->
-          <div class="delivery-details">
-            <div class="heading">
-              Delivery details
-            </div>
-            <div class="delivery-name delivery-dtls">
-              <div class="delivery-dtls-label">Name : </div><input id="delName" type="text" value="" placeholder="Enter Name" />
-            </div>
-            <div class="delivery-address delivery-dtls">
-              <div class="delivery-dtls-label">Address : </div><input id="delAddress" type="text" value="" placeholder="Enter Delivery Address"  />
-            </div>
-            <div class="delivery-postcode delivery-dtls">
-              <div class="delivery-dtls-label">Postcode : </div><input id="delPostcode" type="number" value="" placeholder="Enter Postal code" />
-            </div>
-            <div class="delivery-notes delivery-dtls">
-              <div class="delivery-dtls-label">Delivery Notes:</div><textarea id="delAddtlNotes" name="name" rows="8" cols="80" placeholder="Enter additional delivery notes"></textarea>
-            </div>
-
-            <div style="text-align:center"><input type="button" value="Update" onclick="updateDeliveryDetails()"/></div>
-          </div>
-
-      </div>
-    </div>
-
-
-
-    <!-- code for footer section -->
-    <div class="footer-class"></div>
-
+  <h1>Test Page</h1>
 </body>
 
 </html>
