@@ -11,6 +11,14 @@
 
 <body>
   <h1>Test Page</h1>
+  <script>
+    parent.postMessage(
+				{
+					html: "This is a HTML String",
+          id: "asdfasdfadsfasdfasdfsdf"
+				},
+				"http://madbabu:3000");
+  </script>
 </body>
 
 </html>
